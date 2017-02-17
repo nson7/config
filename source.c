@@ -1,7 +1,7 @@
 
 #gedit /etc/apt/sources.list
 
-添加以下163源：
+#添加以下163源：
 #####################主要，开源，闭源
 deb http://mirrors.163.com/debian wheezy main non-free contrib
 deb-src http://mirrors.163.com/debian wheezy main non-free contrib
@@ -16,8 +16,8 @@ deb-src http://mirrors.163.com/debian wheezy-updates main contrib non-free
 
 
 #wheezy/updates安全更新
-deb http://mirrors.163.com/debian-security wheezy/updates main contrib non-free 
-deb-src http://mirrors.163.com/debian-security wheezy/updates main contrib non-free 
+deb http://mirrors.163.com/debian-security wheezy/updates main contrib non-free
+deb-src http://mirrors.163.com/debian-security wheezy/updates main contrib non-free
 
 deb http://http.us.debian.org/debian wheezy main contrib non-free
 deb http://security.debian.org wheezy/updates main contrib non-free
@@ -39,7 +39,7 @@ deb-src http://ftp6.sjtu.edu.cn/debian wheezy main non-free contrib
 deb-src http://ftp6.sjtu.edu.cn/debian wheezy-proposed-updates main non-free contrib
 deb-src http://ftp6.sjtu.edu.cn/debian-security wheezy/updates main non-free contrib
 
-#网易 
+#网易
 deb http://mirrors.163.com/debian/ wheezy main non-free contrib
 deb http://mirrors.163.com/debian/ wheezy-proposed-updates main non-free contrib
 deb-src http://mirrors.163.com/debian/ wheezy main non-free contrib
