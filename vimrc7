@@ -331,11 +331,11 @@ nnoremap gj j
 nnoremap <leader>bb :b#<cr>
 nnoremap ;; q:k<CR>
 
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap " ""<left>
-inoremap ' ''<left>
+" inoremap ( ()<left>
+" inoremap [ []<left>
+" inoremap { {}<left>
+" inoremap " ""<left>
+" inoremap ' ''<left>
 
 " 分屏窗口移动, Smart way to move between windows
 nnoremap <C-j> <C-W>j
@@ -625,9 +625,7 @@ Bundle 'terryma/vim-expand-region'
 
 Bundle 'vim-scripts/a.vim'
 
-" Bundle 'jiangmiao/auto-pairs'
-
-Bundle 'Raimodi/delimitMate'
+Bundle 'jiangmiao/auto-pairs'
 
 if g:islinux
 " git
@@ -1257,14 +1255,6 @@ endif
 " let g:SuperTabDefultCompletionType='context'
 "let g:SuperTabDefaultCompletionType = '<C-X><C-U>'
  let g:SuperTabRetainCompletionType=2
-" }}}
-
-" delimitMate {{{
-    " for python docstring ",优化输入
-    au FileType python let b:delimitMate_nesting_quotes = ['"']
-    au FileType php let delimitMate_matchpairs = "(:),[:],{:}"
-    " 关闭某些类型文件的自动补全
-    "au FileType mail let b:delimitMate_autoclose = 0
 " }}}
 endif
 
