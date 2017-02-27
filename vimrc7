@@ -574,9 +574,13 @@ endif
 
 " 让vundle管理插件版本,必须
 Bundle 'VundleVim/Vundle.vim'
+
 " Bundle 'taglist.vim'
 " tagbar
+if executable('ctags')
 Bundle 'majutsushi/tagbar'
+endif
+
 " nerdtree nerdtreetabs
 Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
@@ -656,6 +660,7 @@ Bundle 'WinterXMQ/escalt.vim'
 
 if executable('ag')
 Bundle 'mileszs/ack.vim'
+" Bundle 'rking/ag.vim'
 let g:ackprg = 'ag --nogroup --nocolor --column --smart-case'
 elseif executable('ack-grep')
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
