@@ -331,11 +331,11 @@ nnoremap gj j
 nnoremap <leader>bb :b#<cr>
 nnoremap ;; q:k<CR>
 
-inoremap ( ()<ESC>i
-inoremap [ []<ESC>i
-inoremap { {}<ESC>i
-inoremap " ""<ESC>i
-inoremap ' ''<ESC>i
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap " ""<left>
+inoremap ' ''<left>
 
 " 分屏窗口移动, Smart way to move between windows
 nnoremap <C-j> <C-W>j
@@ -351,14 +351,6 @@ vnoremap <C-h> <C-W>h
 vnoremap <C-l> <C-W>l
 vnoremap <C-r> <C-W>r " 分屏窗口交换
 vnoremap <C-o> <C-W>o "全屏
-
-" 命令行模式增强，ctrl - a到行首， -e 到行尾
-cnoremap <C-j> <t_kd>
-cnoremap <C-k> <t_ku>
-cnoremap <C-f> <t_kr>
-cnoremap <c-b> <t_kl>
-cnoremap <C-a> <Home>
-cnoremap <C-e> <End>
 
 " y$ -> Y Make Y behave like other capitals
 nnoremap Y y$
@@ -413,6 +405,7 @@ map <C-u> :tabonly<cr>
 " nnoremap <leader>ee :!python %<cr>
 " nnoremap <leader>oo :!gcc %<cr>
 " nnoremap <leader>ee :!a.out<cr>
+noremap <leader>ee :!sh %<cr>
 
 nnoremap <M-x> :
 nnoremap <C-x>0 :wq<cr>
@@ -422,6 +415,22 @@ nnoremap <C-x>3 :vsplit<cr>
 nnoremap <C-x>b :b#<cr>
 nnoremap <C-x><C-f> :e<Space>
 map <C-x><C-b> :ls<cr>
+
+" 命令行模式增强，ctrl - a到行首， -e 到行尾
+cnoremap <C-j> <t_kd>
+cnoremap <C-k> <t_ku>
+cnoremap <C-f> <t_kr>
+cnoremap <c-b> <t_kl>
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+
+inoremap <C-j> <t_kd>
+inoremap <C-k> <t_ku>
+inoremap <C-f> <t_kr>
+inoremap <c-b> <t_kl>
+inoremap <C-a> <Home>
+inoremap <C-e> <End>
+
 
 " cscope
 set cscopequickfix=s-,c-,d-,i-,t-,e-
@@ -615,6 +624,10 @@ Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'terryma/vim-expand-region'
 
 Bundle 'vim-scripts/a.vim'
+
+" Bundle 'jiangmiao/auto-pairs'
+
+Bundle 'Raimodi/delimitMate'
 
 if g:islinux
 " git
@@ -1244,6 +1257,14 @@ endif
 " let g:SuperTabDefultCompletionType='context'
 "let g:SuperTabDefaultCompletionType = '<C-X><C-U>'
  let g:SuperTabRetainCompletionType=2
+" }}}
+
+" delimitMate {{{
+    " for python docstring ",优化输入
+    au FileType python let b:delimitMate_nesting_quotes = ['"']
+    au FileType php let delimitMate_matchpairs = "(:),[:],{:}"
+    " 关闭某些类型文件的自动补全
+    "au FileType mail let b:delimitMate_autoclose = 0
 " }}}
 endif
 
