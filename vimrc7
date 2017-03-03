@@ -329,7 +329,7 @@ nnoremap gk k
 nnoremap j gj
 nnoremap gj j
 nnoremap <leader>bb :b#<cr>
-nnoremap ;; q:k<CR>
+" nnoremap ;; q:k<CR>
 
 " inoremap ( ()<left>
 " inoremap [ []<left>
