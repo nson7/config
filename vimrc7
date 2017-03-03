@@ -669,6 +669,9 @@ elseif executable('ack')
 Bundle 'mileszs/ack.vim'
 endif
 
+" Bundle 'tpope/vim-surround'
+" Bundle 'tpope/vim-repeat'
+
 " auto complete
 " 代码自动补全
 " 迄今为止用到的最好的自动VIM自动补全插件
