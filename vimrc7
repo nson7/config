@@ -21,6 +21,8 @@ endif
 
 set nocompatible  "去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限
 set backspace=indent,eol,start
+set makeprg=gcc\ %
+
 " 修改leader键
 let mapleader = ','
 let g:mapleader = ','
@@ -402,10 +404,10 @@ nnoremap <leader>9 9gt
 map <C-u> :tabonly<cr>
 
 " emacs HotKey
+nnoremap <leader>oo :make<cr>
+nnoremap <leader>ee :!./a.out<cr>
+" noremap <leader>ee :!bash %<cr>
 " nnoremap <leader>ee :!python %<cr>
-" nnoremap <leader>oo :!gcc %<cr>
-" nnoremap <leader>ee :!a.out<cr>
-noremap <leader>ee :!sh %<cr>
 
 nnoremap <M-x> :
 nnoremap <C-x>0 :wq<cr>
