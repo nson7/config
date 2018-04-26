@@ -814,7 +814,7 @@ endif
     " <C-j>: down
     " <C-K>: up
     let g:ctrlp_map = '<leader>kk'
-    let g:ctrlp_map = '<leader>ip'
+    " let g:ctrlp_map = '<leader>ip'
     let g:ctrlp_cmd = 'CtrlP'
     nnoremap <leader>rr :CtrlPMRU<CR>
     let g:ctrlp_custom_ignore = {
@@ -1290,4 +1290,6 @@ source $VIMRUNTIME/menu.vim
 "解决console输出乱码
 language message zh_CN.utf-8
 endif
+
+hi Normal  ctermfg=252 ctermbg=none
 
