@@ -15,3 +15,4 @@ ssh-keygen -t rsa -C "nson7@sina.com"
 git config --global color.ui true
 
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
